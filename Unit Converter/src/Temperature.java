@@ -4,8 +4,14 @@ import java.awt.event.ActionListener;
 
 public class Temperature extends JFrame {
     private JButton btnTempToMain;
-    private JLabel testLabel;
     private JPanel panelTemperature;
+    private JTextField textFieldOriginal;
+    private JTextField textFieldConverted;
+    private JButton btnConvert;
+    private JComboBox comboBoxOriginal;
+    private JComboBox comboBoxConverted;
+    private JLabel labelToConvert;
+    private JLabel labelConverted;
 
 
     public Temperature() {
@@ -18,6 +24,7 @@ public class Temperature extends JFrame {
         setTitle("Temperature");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // Open main menu when button clicked
         btnTempToMain.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -26,5 +33,26 @@ public class Temperature extends JFrame {
                 dispose(); // Close the temperature frame.
             }
         });
+
+        // List of temperature units for the combo boxes
+        String[] tempStrings = {"Celsius", "Fahrenheit", "Kelvin"};
+
+        // Original temperature combobox
+        for (String temp : tempStrings) {
+
+            comboBoxOriginal.addItem(temp);
+
+        }
+        comboBoxOriginal.setSelectedIndex(0);
+
+        // Converted combobox
+
+        for (String temp : tempStrings) {
+
+            comboBoxConverted.addItem(temp);
+
+        }
+        comboBoxConverted.setSelectedIndex(0);
+
     }
 }
