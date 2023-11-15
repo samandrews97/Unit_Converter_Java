@@ -37,7 +37,7 @@ public class Temperature extends JFrame {
         // List of temperature units for the combo boxes
         String[] tempStrings = {"Celsius", "Fahrenheit", "Kelvin"};
 
-        // Populate original combobox and set initial value
+        // Populate original combo box and set initial value
         for (String temp : tempStrings) {
 
             comboBoxOriginal.addItem(temp);
@@ -45,8 +45,7 @@ public class Temperature extends JFrame {
         }
         comboBoxOriginal.setSelectedIndex(0);
 
-        // Populate converted combobox and set initial value
-
+        // Populate converted combo box and set initial value
         for (String temp : tempStrings) {
 
             comboBoxConverted.addItem(temp);
@@ -58,17 +57,18 @@ public class Temperature extends JFrame {
         // Make the user unable to edit converted text box
         textFieldConverted.setEditable(false);
 
-        // User input from textbox
+        // User input from text box
         final float[] originalValue = {0};
 
+        // When convert button clicked
         btnConvert.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                // Get index of original combobox
+                // Get index of original combo box
                 int originalUnit = comboBoxOriginal.getSelectedIndex();
 
-                // Get index of converted combobox
+                // Get index of converted combo box
                 int convertedUnit = comboBoxConverted.getSelectedIndex();
 
                 // Get user input from text box
@@ -76,9 +76,10 @@ public class Temperature extends JFrame {
 
                 // Convert user input to a float
                 try {
+
                     originalValue[0] = Float.parseFloat(originalValueString);
 
-                } catch (NumberFormatException exception){
+                } catch (NumberFormatException exception) {
 
                     // Print an error dialog box if the input is not a number
                     JOptionPane.showMessageDialog(null, "Enter a Number", "ERROR!", JOptionPane.ERROR_MESSAGE);
@@ -153,13 +154,8 @@ public class Temperature extends JFrame {
                                 break;
                         }
                         break;
-
                 }
-
             }
-
       });
-
     }
-    
 }
