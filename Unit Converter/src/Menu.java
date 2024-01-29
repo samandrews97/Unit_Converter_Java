@@ -7,8 +7,25 @@ public class Menu extends JFrame {
     private JLabel labelMain;
     private JButton btnTime;
     private JPanel panelMenu;
+    private JButton btnSpeed;
 
     public Menu() {
+
+        // Open speed JFrame when Speed button clicked
+        btnSpeed.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // Create new speed form
+                Speed speed = new Speed();
+                speed.setVisible(true);
+
+                dispose();  // Close menu frame
+
+            }
+
+        });
 
         // Open temperature JFrame when Temperature button clicked
         btnTemp.addActionListener(new ActionListener() {
