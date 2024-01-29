@@ -8,6 +8,7 @@ public class Menu extends JFrame {
     private JButton btnTime;
     private JPanel panelMenu;
     private JButton btnSpeed;
+    private JButton btnWeight;
 
     public Menu() {
 
@@ -52,6 +53,20 @@ public class Menu extends JFrame {
                 dispose();  // Close menu frame
             }
         });
+
+        // Open weight JFrame when weight button clicked
+        btnWeight.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // Create a new weight frame
+                Weight weight = new Weight();
+                weight.setVisible(true);
+
+                dispose();  // Close menu frame
+            }
+        });
+
     }
 
     public static void main(String[] args) {
