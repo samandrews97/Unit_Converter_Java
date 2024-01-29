@@ -20,7 +20,9 @@ public class Menu extends JFrame {
                 temperature.setVisible(true);
 
                 dispose();  // Close menu frame
+
             }
+
         });
 
         // Open time JFrame when time button clicked
@@ -33,8 +35,11 @@ public class Menu extends JFrame {
                 time.setVisible(true);
 
                 dispose();  // Close menu frame
+
             }
+
         });
+
     }
 
     public static void main(String[] args) {
@@ -49,4 +54,5 @@ public class Menu extends JFrame {
         menu.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }
+
 }

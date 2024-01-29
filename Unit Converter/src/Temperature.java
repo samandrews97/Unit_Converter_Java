@@ -31,7 +31,9 @@ public class Temperature extends JFrame {
                 Menu.main(null); // Create a new Main menu frame
 
                 dispose(); // Close the temperature frame.
+
             }
+
         });
 
         // List of temperature units for the combo boxes
@@ -52,7 +54,6 @@ public class Temperature extends JFrame {
 
         }
         comboBoxConverted.setSelectedIndex(0);
-
 
         // Make the user unable to edit converted text box
         textFieldConverted.setEditable(false);
@@ -154,8 +155,13 @@ public class Temperature extends JFrame {
                                 break;
                         }
                         break;
+
                 }
+
             }
+
       });
+
     }
+
 }

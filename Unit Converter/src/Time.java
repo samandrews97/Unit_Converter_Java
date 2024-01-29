@@ -28,7 +28,9 @@ public class Time extends JFrame {
                 Menu.main(null); // Create a new Main menu frame
 
                 dispose(); // Close the time frame.
+
             }
+
         });
 
         // List of time units for the combo boxes
@@ -412,8 +414,12 @@ public class Time extends JFrame {
                                 break;
                         }
                         break;
+
                 }
+
             }
+
         });
+        
     }
 }
