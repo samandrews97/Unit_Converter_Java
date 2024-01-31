@@ -96,7 +96,7 @@ public class Weight extends JFrame {
                                 break;
                             // When conversion combo box is kilogram
                             case 1:
-                                String gramToKg = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.001))));
+                                String gramToKg = Float.toString(Float.parseFloat(String.format("%.4f", (originalValue[0] * 0.001))));
                                 textFieldConverted.setText(gramToKg);
                                 break;
                             // When conversion combo box is milligram
@@ -106,27 +106,27 @@ public class Weight extends JFrame {
                                 break;
                             // When conversion combo box is metric ton
                             case 3:
-                                String gramToMt = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.000001))));
+                                String gramToMt = Float.toString(Float.parseFloat(String.format("%.7f", (originalValue[0] * 0.000001))));
                                 textFieldConverted.setText(gramToMt);
                                 break;
                             // When conversion combo box is ton
                             case 4:
-                                String gramToTon = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.0000011023))));
+                                String gramToTon = Float.toString(Float.parseFloat(String.format("%.8f", (originalValue[0] * 0.0000011023))));
                                 textFieldConverted.setText(gramToTon);
                                 break;
                             // When conversion combo box is ounce
                             case 5:
-                                String gramToOunce = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.03527396))));
+                                String gramToOunce = Float.toString(Float.parseFloat(String.format("%.3f", (originalValue[0] * 0.03527396))));
                                 textFieldConverted.setText(gramToOunce);
                                 break;
                             // When conversion combo box is pound
                             case 6:
-                                String gramToPound = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.002204623))));
+                                String gramToPound = Float.toString(Float.parseFloat(String.format("%.4f", (originalValue[0] * 0.002204623))));
                                 textFieldConverted.setText(gramToPound);
                                 break;
                             // When conversion combo box is stone
                             case 7:
-                                String gramToStone = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.000157473))));
+                                String gramToStone = Float.toString(Float.parseFloat(String.format("%.5f", (originalValue[0] * 0.000157473))));
                                 textFieldConverted.setText(gramToStone);
                                 break;
 
@@ -154,12 +154,12 @@ public class Weight extends JFrame {
                                 break;
                             // When conversion combo box is metric ton
                             case 3:
-                                String kgToMt = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.001))));
+                                String kgToMt = Float.toString(Float.parseFloat(String.format("%.4f", (originalValue[0] * 0.001))));
                                 textFieldConverted.setText(kgToMt);
                                 break;
                             // When conversion combo box is ton
                             case 4:
-                                String kgToTon = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.001102311))));
+                                String kgToTon = Float.toString(Float.parseFloat(String.format("%.4f", (originalValue[0] * 0.001102311))));
                                 textFieldConverted.setText(kgToTon);
                                 break;
                             // When conversion combo box is ounce
@@ -185,12 +185,12 @@ public class Weight extends JFrame {
                         switch (convertedUnit) {
                             // When conversion combo box is gram
                             case 0:
-                                String mgToGram = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.001))));
+                                String mgToGram = Float.toString(Float.parseFloat(String.format("%.4f", (originalValue[0] * 0.001))));
                                 textFieldConverted.setText(mgToGram);
                                 break;
                             // When conversion combo box is kilogram
                             case 1:
-                                String mgToKg = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.000001))));
+                                String mgToKg = Float.toString(Float.parseFloat(String.format("%.8f", (originalValue[0] * 0.000001))));
                                 textFieldConverted.setText(mgToKg);
                                 break;
                             // When conversion combo box is milligram
@@ -200,27 +200,27 @@ public class Weight extends JFrame {
                                 break;
                             // When conversion combo box is metric ton
                             case 3:
-                                String mgToMt = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.000000001))));
+                                String mgToMt = Float.toString(Float.parseFloat(String.format("%.10f", (originalValue[0] * 0.000000001))));
                                 textFieldConverted.setText(mgToMt);
                                 break;
                             // When conversion combo box is ton
                             case 4:
-                                String mgToTon = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.00000000102311))));
+                                String mgToTon = Float.toString(Float.parseFloat(String.format("%.11f", (originalValue[0] * 0.00000000102311))));
                                 textFieldConverted.setText(mgToTon);
                                 break;
                             // When conversion combo box is ounce
                             case 5:
-                                String mgToOunce = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.000035274))));
+                                String mgToOunce = Float.toString(Float.parseFloat(String.format("%.6f", (originalValue[0] * 0.000035274))));
                                 textFieldConverted.setText(mgToOunce);
                                 break;
                             // When conversion combo box is pound
                             case 6:
-                                String mgToPound = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.0000022046))));
+                                String mgToPound = Float.toString(Float.parseFloat(String.format("%.7f", (originalValue[0] * 0.0000022046))));
                                 textFieldConverted.setText(mgToPound);
                                 break;
                             // When conversion combo box is stone
                             case 7:
-                                String mgToStone = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.0000001577))));
+                                String mgToStone = Float.toString(Float.parseFloat(String.format("%.8f", (originalValue[0] * 0.0000001577))));
                                 textFieldConverted.setText(mgToStone);
                                 break;
 
@@ -252,7 +252,7 @@ public class Weight extends JFrame {
                                 break;
                             // When conversion box is ton
                             case 4:
-                                String mtToTon = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 1.102311))));
+                                String mtToTon = Float.toString(Float.parseFloat(String.format("%.3f", (originalValue[0] * 1.102311))));
                                 textFieldConverted.setText(mtToTon);
                                 break;
                             // When conversion box is ounce
@@ -329,7 +329,7 @@ public class Weight extends JFrame {
                                 break;
                             // When converted combo box is kilogram
                             case 1:
-                                String ounceToKg = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.02834952))));
+                                String ounceToKg = Float.toString(Float.parseFloat(String.format("%.3f", (originalValue[0] * 0.02834952))));
                                 textFieldConverted.setText(ounceToKg);
                                 break;
                             // WHen converted combo box is milligram
@@ -339,12 +339,12 @@ public class Weight extends JFrame {
                                 break;
                             // When converted combo box is metric ton
                             case 3:
-                                String ounceToMt = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.0000283495))));
+                                String ounceToMt = Float.toString(Float.parseFloat(String.format("%.6f", (originalValue[0] * 0.0000283495))));
                                 textFieldConverted.setText(ounceToMt);
                                 break;
                             // When converted combo box is ton
                             case 4:
-                                String ounceToTon = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.00003125))));
+                                String ounceToTon = Float.toString(Float.parseFloat(String.format("%.6f", (originalValue[0] * 0.00003125))));
                                 textFieldConverted.setText(ounceToTon);
                                 break;
                             // When converted combo box is ounce
@@ -354,12 +354,12 @@ public class Weight extends JFrame {
                                 break;
                             // When converted combo box is pound
                             case 6:
-                                String ounceToPound = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.0625))));
+                                String ounceToPound = Float.toString(Float.parseFloat(String.format("%.3f", (originalValue[0] * 0.0625))));
                                 textFieldConverted.setText(ounceToPound);
                                 break;
                             // When converted combo box is stone
                             case 7:
-                                String ounceToStone = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.004464286))));
+                                String ounceToStone = Float.toString(Float.parseFloat(String.format("%.4f", (originalValue[0] * 0.004464286))));
                                 textFieldConverted.setText(ounceToStone);
                                 break;
 
@@ -375,11 +375,88 @@ public class Weight extends JFrame {
                                 break;
                             // When converted combo box is kilogram
                             case 1:
-                                String pountToKg = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.4535924))));
-                                textFieldConverted.setText(pountToKg);
+                                String poundToKg = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.4535924))));
+                                textFieldConverted.setText(poundToKg);
                                 break;
-                                
+                            // When converted combo box is milligram
+                            case 2:
+                                String poundToMg = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 453592.4))));
+                                textFieldConverted.setText(poundToMg);
+                                break;
+                            // When converted combo box is metric ton
+                            case 3:
+                                String poundToMt = Float.toString(Float.parseFloat(String.format("%.5f", (originalValue[0] * 0.0004535924))));
+                                textFieldConverted.setText(poundToMt);
+                                break;
+                            // When converted combo box is ton
+                            case 4:
+                                String poundToTon = Float.toString(Float.parseFloat(String.format("%.5f", (originalValue[0] * 0.0005))));
+                                textFieldConverted.setText(poundToTon);
+                                break;
+                            // When converted combo box is ounce
+                            case 5:
+                                String poundToOunce = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 16))));
+                                textFieldConverted.setText(poundToOunce);
+                                break;
+                            // When converted combo box is pound
+                            case 6:
+                                String poundToPound = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
+                                textFieldConverted.setText(poundToPound);
+                                break;
+                            // When converted combo box is stone
+                            case 7:
+                                String poundToStone = Float.toString(Float.parseFloat(String.format("%.3f", (originalValue[0] * 0.07142857))));
+                                textFieldConverted.setText(poundToStone);
+                                break;
                         }
+                        break;
+
+                    // When original combo box is Stone
+                    case 7:
+                        switch (convertedUnit) {
+                            // When converted combo box is gram
+                            case 0:
+                                String stoneToGram = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 6350.293))));
+                                textFieldConverted.setText(stoneToGram);
+                                break;
+                            // When converted combo box is kilogram
+                            case 1:
+                                String stoneToKg = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 6.350293))));
+                                textFieldConverted.setText(stoneToKg);
+                                break;
+                            // When converted combo box is milligram
+                            case 2:
+                                String stoneToMg = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 6350293))));
+                                textFieldConverted.setText(stoneToMg);
+                                break;
+                            // When converted combo box is metric ton
+                            case 3:
+                                String stoneToMt = Float.toString(Float.parseFloat(String.format("%.4f", (originalValue[0] * 0.006350293))));
+                                textFieldConverted.setText(stoneToMt);
+                                break;
+                            // When converted combo box is ton
+                            case 4:
+                                String stoneToTon = Float.toString(Float.parseFloat(String.format("%.4f", (originalValue[0] * 0.007))));
+                                textFieldConverted.setText(stoneToTon);
+                                break;
+                            // When converted combo box is ounce
+                            case 5:
+                                String stoneToOunce = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 224))));
+                                textFieldConverted.setText(stoneToOunce);
+                                break;
+                            // When converted combo box is pound
+                            case 6:
+                                String stoneToPound = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 14))));
+                                textFieldConverted.setText(stoneToPound);
+                                break;
+                            // When converted combo box is stone
+                            case 7:
+                                String stoneToStone = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
+                                textFieldConverted.setText(stoneToStone);
+                                break;
+
+                        }
+                        break;
                 }
             }
         });
