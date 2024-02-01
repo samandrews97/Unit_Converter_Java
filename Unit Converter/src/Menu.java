@@ -9,8 +9,23 @@ public class Menu extends JFrame {
     private JPanel panelMenu;
     private JButton btnSpeed;
     private JButton btnWeight;
+    private JButton btnDistanceHeight;
 
     public Menu() {
+
+        btnDistanceHeight.addActionListener(new ActionListener() {
+            
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // Create new distance/height form
+                DistanceHeight distanceHeight = new DistanceHeight();
+                distanceHeight.setVisible(true);
+
+                dispose();  // Close menu frame
+
+            }
+        });
 
         // Open speed JFrame when Speed button clicked
         btnSpeed.addActionListener(new ActionListener() {
