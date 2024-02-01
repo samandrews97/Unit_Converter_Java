@@ -32,10 +32,11 @@ public class Speed extends JFrame {
                 dispose();  // Close the time frame
 
             }
+            
         });
 
         // List of time units for the combo boxes
-        String[] speedStrings = {"Kilometers per hour", "Miles per hour", "Metres per second", "Knots"};
+        String[] speedStrings = {"Kilometres per hour", "Miles per hour", "Metres per second", "Knots"};
 
         // Populate original combo box and set initial value
         for (String speed : speedStrings) {
@@ -87,25 +88,25 @@ public class Speed extends JFrame {
 
                 // Switch block for backend of time calculator
                 switch (originalUnit) {
-                    // When original combo box is kilometers per hour
+                    // When original combo box is kilometres per hour
                     case 0:
                         switch (convertedUnit) {
-                            // When conversion combo box is kilometers per hour
+                            // When converted combo box is kilometres per hour
                             case 0:
                                 String kphToKph = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
                                 textFieldConverted.setText(kphToKph);
                                 break;
-                            // When conversion box is miles per hour
+                            // When converted box is miles per hour
                             case 1:
                                 String kphToMph = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.6213712))));
                                 textFieldConverted.setText(kphToMph);
                                 break;
-                            // When conversion box is meters per second
+                            // When converted box is metres per second
                             case 2:
                                 String kphToMs = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.2777778))));
                                 textFieldConverted.setText(kphToMs);
                                 break;
-                            // When conversion box is knots
+                            // When converted box is knots
                             case 3:
                                 String kphToKnots = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.5399565))));
                                 textFieldConverted.setText(kphToKnots);
@@ -115,22 +116,22 @@ public class Speed extends JFrame {
                     // When original combo box is miles per hour
                     case 1:
                         switch (convertedUnit) {
-                            // When conversion combo box is kilometers per hour
+                            // When converted combo box is kilometres per hour
                             case 0:
                                 String mphToKph = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 1.609344))));
                                 textFieldConverted.setText(mphToKph);
                                 break;
-                            // When conversion combo box is miles per hour
+                            // When converted combo box is miles per hour
                             case 1:
                                 String mphToMph = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
                                 textFieldConverted.setText(mphToMph);
                                 break;
-                            // When conversion box is meters per second
+                            // When converted box is metres per second
                             case 2:
                                 String mphToMs = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.44704))));
                                 textFieldConverted.setText(mphToMs);
                                 break;
-                            // When conversion box is knots
+                            // When converted box is knots
                             case 3:
                                 String mphToKnots = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 0.8689758))));
                                 textFieldConverted.setText(mphToKnots);
@@ -138,10 +139,10 @@ public class Speed extends JFrame {
 
                         }
                         break;
-                // When original combo box is meters per second
+                    // When original combo box is metres per second
                     case 2:
                         switch (convertedUnit) {
-                            // When converted combo box is kilometers per hour
+                            // When converted combo box is kilometres per hour
                             case 0:
                                 String msToKph = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 3.6))));
                                 textFieldConverted.setText(msToKph);
@@ -151,7 +152,7 @@ public class Speed extends JFrame {
                                 String msToMph = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 2.236936))));
                                 textFieldConverted.setText(msToMph);
                                 break;
-                            // When converted box is meters per second
+                            // When converted box is metres per second
                             case 2:
                                 String msToMs = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
                                 textFieldConverted.setText(msToMs);
@@ -167,7 +168,7 @@ public class Speed extends JFrame {
                     // When original combo box is knots
                     case 3:
                         switch (convertedUnit) {
-                            // When converted combo box is kilometers per hour
+                            // When converted combo box is kilometres per hour
                             case 0:
                                 String knotsToKph = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 1.852001))));
                                 textFieldConverted.setText(knotsToKph);
@@ -177,7 +178,7 @@ public class Speed extends JFrame {
                                 String knotsToMph = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 1.15078))));
                                 textFieldConverted.setText(knotsToMph);
                                 break;
-                            // When converted combo box is meters per second
+                            // When converted combo box is metres per second
                             case 2:
                                 String knotsToMs = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0]) * 0.5144447)));
                                 textFieldConverted.setText(knotsToMs);
@@ -190,7 +191,11 @@ public class Speed extends JFrame {
                         }
                         break;
                 }
+                
             }
+            
         });
+        
     }
+    
 }

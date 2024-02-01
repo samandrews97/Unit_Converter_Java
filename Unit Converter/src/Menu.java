@@ -13,6 +13,7 @@ public class Menu extends JFrame {
 
     public Menu() {
 
+        // Open distance/height JFrame when Distance/Height button clicked
         btnDistanceHeight.addActionListener(new ActionListener() {
             
             @Override
@@ -25,6 +26,7 @@ public class Menu extends JFrame {
                 dispose();  // Close menu frame
 
             }
+
         });
 
         // Open speed JFrame when Speed button clicked
@@ -45,6 +47,7 @@ public class Menu extends JFrame {
 
         // Open temperature JFrame when Temperature button clicked
         btnTemp.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -60,6 +63,7 @@ public class Menu extends JFrame {
 
         // Open time JFrame when time button clicked
         btnTime.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -75,6 +79,7 @@ public class Menu extends JFrame {
 
         // Open weight JFrame when weight button clicked
         btnWeight.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -84,6 +89,7 @@ public class Menu extends JFrame {
 
                 dispose();  // Close menu frame
             }
+
         });
 
     }

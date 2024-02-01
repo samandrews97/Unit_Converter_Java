@@ -26,6 +26,7 @@ public class Temperature extends JFrame {
 
         // Open main menu when button clicked
         btnTempToMain.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
                 Menu.main(null); // Create a new Main menu frame
@@ -63,6 +64,7 @@ public class Temperature extends JFrame {
 
         // When convert button clicked
         btnConvert.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -92,21 +94,19 @@ public class Temperature extends JFrame {
                     // When original combo box is celsius
                     case 0 :
                         switch (convertedUnit) {
-                            // When conversion combo box is celsius
+                            // When converted combo box is celsius
                             case 0:
                                 String celsiusToCelsius = Integer.toString(Math.round(originalValue[0]));
                                 textFieldConverted.setText(celsiusToCelsius);
                                 break;
                             // When converted combo box is fahrenheit
                             case 1:
-                                int celsiusToFahrenheit = Math.round(originalValue[0] * ((float) 9 / 5)) + 32;
-                                String celsiusToFahrenheitString = Integer.toString(celsiusToFahrenheit);
+                                String celsiusToFahrenheitString = Integer.toString(Math.round(originalValue[0] * ((float) 9 / 5)) + 32);
                                 textFieldConverted.setText(celsiusToFahrenheitString);
                                 break;
                             // When converted combo box is kelvin
                             case 2:
-                                int celsiusToKelvin = Math.round(originalValue[0] + ((float) 273.15));
-                                String celsiusToKelvinString = Integer.toString(celsiusToKelvin);
+                                String celsiusToKelvinString = Integer.toString(Math.round(originalValue[0] + ((float) 273.15)));
                                 textFieldConverted.setText(celsiusToKelvinString);
                                 break;
                         }
@@ -114,21 +114,19 @@ public class Temperature extends JFrame {
                     // When original combo box is fahrenheit
                     case 1:
                         switch (convertedUnit) {
-                            // When conversion combo box is celsius
+                            // When converted combo box is celsius
                             case 0:
-                                int fahrenheitToCelsius = Math.round((originalValue[0] - 32) * ((float) 5 / 9));
-                                String fahrenheitToCelsiusString = Integer.toString(fahrenheitToCelsius);
+                                String fahrenheitToCelsiusString = Integer.toString(Math.round((originalValue[0] - 32) * ((float) 5 / 9)));
                                 textFieldConverted.setText(fahrenheitToCelsiusString);
                                 break;
-                            // When conversion combo box is fahrenheit
+                            // When converted combo box is fahrenheit
                             case 1:
                                 String fahrenheitToFahrenheit = Integer.toString(Math.round(originalValue[0]));
                                 textFieldConverted.setText(fahrenheitToFahrenheit);
                                 break;
-                            // When conversion combo box is kelvin
+                            // When converted combo box is kelvin
                             case 2:
-                                int fahrenheitToKelvin = Math.round((originalValue[0] - 32) * ((float) 5 / 9) + ((float) 273.15));
-                                String fahrenheitToKelvinString = Integer.toString(fahrenheitToKelvin);
+                                String fahrenheitToKelvinString = Integer.toString(Math.round((originalValue[0] - 32) * ((float) 5 / 9) + ((float) 273.15)));
                                 textFieldConverted.setText(fahrenheitToKelvinString);
                                 break;
                         }
@@ -136,19 +134,17 @@ public class Temperature extends JFrame {
                     // When original combo box is kelvin
                     case 2:
                         switch (convertedUnit) {
-                            // When conversion combo box is celsius
+                            // When converted combo box is celsius
                             case 0:
-                                int kelvinToCelsius = Math.round(originalValue[0] - ((float) 273.15));
-                                String kelvinToCelsiusString = Integer.toString(kelvinToCelsius);
+                                String kelvinToCelsiusString = Integer.toString(Math.round(originalValue[0] - ((float) 273.15)));
                                 textFieldConverted.setText(kelvinToCelsiusString);
                                 break;
-                            // When conversion combo box is fahrenheit
+                            // When converted combo box is fahrenheit
                             case 1:
-                                int kelvinToFahrenheit = Math.round((originalValue[0] - ((float) 273.15)) * ((float) 9 / 5) + 32);
-                                String kelvinToFahrenheitString = Integer.toString(kelvinToFahrenheit);
+                                String kelvinToFahrenheitString = Integer.toString(Math.round((originalValue[0] - ((float) 273.15)) * ((float) 9 / 5) + 32));
                                 textFieldConverted.setText(kelvinToFahrenheitString);
                                 break;
-                            // When conversion combo box is kelvin
+                            // When converted combo box is kelvin
                             case 2:
                                 String kelvinToKelvin = Integer.toString(Math.round(originalValue[0]));
                                 textFieldConverted.setText(kelvinToKelvin);

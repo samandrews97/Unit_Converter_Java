@@ -89,46 +89,40 @@ public class Time extends JFrame {
                     // When original combo box is seconds
                     case 0:
                         switch (convertedUnit) {
-                            // When conversion combo box is seconds
+                            // When converted combo box is seconds
                             case 0:
-                                String secondsToSecondsString = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
-                                textFieldConverted.setText(secondsToSecondsString);
+                                String secondsToSeconds = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
+                                textFieldConverted.setText(secondsToSeconds);
                                 break;
-                            // When conversion combo box is minutes
+                            // When converted combo box is minutes
                             case 1:
-                                float secondsToMinutes = Float.parseFloat(String.format("%.2f", (originalValue[0] / 60.00)));
-                                String secondsToMinutesString = Float.toString(secondsToMinutes);
-                                textFieldConverted.setText(secondsToMinutesString);
+                                String secondsToMinutes = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] / 60.00))));
+                                textFieldConverted.setText(secondsToMinutes);
                                 break;
-                            // When conversion combo box is hours
+                            // When converted combo box is hours
                             case 2:
-                                float secondsToHours = Float.parseFloat(String.format("%.2f", (originalValue[0] * (float) Math.pow(60, -2))));
-                                String secondsToHoursString = Float.toString(secondsToHours);
-                                textFieldConverted.setText(secondsToHoursString);
+                                String secondsToHours = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * (float) Math.pow(60, -2)))));
+                                textFieldConverted.setText(secondsToHours);
                                 break;
-                            // When conversion combo box is days
+                            // When converted combo box is days
                             case 3:
-                                float secondsToDays = Float.parseFloat(String.format("%.2f", (originalValue[0] * (float) Math.pow(60, -2)) / 24.0 ));
-                                String secondsToDaysString = Float.toString(secondsToDays);
-                                textFieldConverted.setText(secondsToDaysString);
+                                String secondsToDays = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * (float) Math.pow(60, -2)) / 24.0 )));
+                                textFieldConverted.setText(secondsToDays);
                                 break;
-                            // When conversion combo box is weeks
+                            // When converted combo box is weeks
                             case 4:
-                                float secondsToWeeks = Float.parseFloat(String.format("%.2f", ((originalValue[0] * (float) Math.pow(60, -2) / 24.0) / 7.0)));
-                                String secondsToWeeksString = Float.toString(secondsToWeeks);
-                                textFieldConverted.setText(secondsToWeeksString);
+                                String secondsToWeeks = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] * (float) Math.pow(60, -2) / 24.0) / 7.0))));
+                                textFieldConverted.setText(secondsToWeeks);
                                 break;
-                            // When conversion combo box is months
+                            // When converted combo box is months
                             case 5:
-                                float secondsToMonths = Float.parseFloat(String.format("%.2f", (((originalValue[0] * (float) Math.pow(60, -2) / 24.0) / 7.0) / 4.3452381))); // 4.3452381 is the value google gives for weeks in a month.
-                                String secondsToMonthsString = Float.toString(secondsToMonths);
-                                textFieldConverted.setText(secondsToMonthsString);
+                                String secondsToMonths = Float.toString(Float.parseFloat(String.format("%.2f", (((originalValue[0] * (float) Math.pow(60, -2) / 24.0) / 7.0) / 4.3452381))));
+                                textFieldConverted.setText(secondsToMonths);
                                 break;
-                            // When conversion combo box is years
+                            // When converted combo box is years
                             case 6:
-                                float secondsToYears = Float.parseFloat(String.format("%.2f", ((((originalValue[0] * (float) Math.pow(60, -2) / 24.0) / 7.0) / 4.3452381) / 12.0)));
-                                String secondsToYearsString = Float.toString(secondsToYears);
-                                textFieldConverted.setText(secondsToYearsString);
+                                String secondsToYears = Float.toString(Float.parseFloat(String.format("%.2f", ((((originalValue[0] * (float) Math.pow(60, -2) / 24.0) / 7.0) / 4.3452381) / 12.0))));
+                                textFieldConverted.setText(secondsToYears);
                                 break;
                         }
                         break;
@@ -137,45 +131,38 @@ public class Time extends JFrame {
                         switch (convertedUnit) {
                             // When converted combo box is seconds
                             case 0:
-                                float minutesToSeconds = Float.parseFloat(String.format("%.2f", (originalValue[0] * 60.0)));
-                                String minutesToSecondsString = Float.toString(minutesToSeconds);
-                                textFieldConverted.setText(minutesToSecondsString);
+                                String minutesToSeconds = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 60.0))));
+                                textFieldConverted.setText(minutesToSeconds);
                                 break;
                             // When converted combo box is minutes
                             case 1:
-                                float minutesToMinutes = Float.parseFloat(String.format("%.2f", originalValue[0]));
-                                String minutesToMinutesString = Float.toString(minutesToMinutes);
-                                textFieldConverted.setText(minutesToMinutesString);
+                                String minutesToMinutes = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
+                                textFieldConverted.setText(minutesToMinutes);
                                 break;
                             // When converted combo box is hours
                             case 2:
-                                float minutesToHours = Float.parseFloat(String.format("%.2f", (originalValue[0] / 60.0)));
-                                String minutesToHoursString = Float.toString(minutesToHours);
-                                textFieldConverted.setText(minutesToHoursString);
+                                String minutesToHours = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] / 60.0))));
+                                textFieldConverted.setText(minutesToHours);
                                 break;
                             // When converted combo box is days
                             case 3:
-                                float minutesToDays = Float.parseFloat(String.format("%.2f", ((originalValue[0] / 60.0) / 24.0)));
-                                String minutesToDaysString = Float.toString(minutesToDays);
-                                textFieldConverted.setText(minutesToDaysString);
+                                String minutesToDays = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] / 60.0) / 24.0))));
+                                textFieldConverted.setText(minutesToDays);
                                 break;
                             // When converted combo box is weeks
                             case 4:
-                                float minutesToWeeks = Float.parseFloat(String.format("%.2f", (((originalValue[0] / 60.0) / 24.0) / 7.0)));
-                                String minutesToWeeksString = Float.toString(minutesToWeeks);
-                                textFieldConverted.setText(minutesToWeeksString);
+                                String minutesToWeeks = Float.toString(Float.parseFloat(String.format("%.2f", (((originalValue[0] / 60.0) / 24.0) / 7.0))));
+                                textFieldConverted.setText(minutesToWeeks);
                                 break;
                             // When converted combo box is months
                             case 5:
-                                float minutesToMonths = Float.parseFloat(String.format("%.2f", ((((originalValue[0] / 60.0) / 24.0) / 7.0) / 4.3452381)));
-                                String minutesToMonthsString = Float.toString(minutesToMonths);
-                                textFieldConverted.setText(minutesToMonthsString);
+                                String minutesToMonths = Float.toString(Float.parseFloat(String.format("%.2f", ((((originalValue[0] / 60.0) / 24.0) / 7.0) / 4.3452381))));
+                                textFieldConverted.setText(minutesToMonths);
                                 break;
                             // When converted combo box is years
                             case 6:
-                                float minutesToYears = Float.parseFloat(String.format("%.2f", (((((originalValue[0] / 60.0) / 24.0) / 7.0) / 4.3452381) / 12.0)));
-                                String minutesToYearsString = Float.toString(minutesToYears);
-                                textFieldConverted.setText(minutesToYearsString);
+                                String minutesToYears = Float.toString(Float.parseFloat(String.format("%.2f", (((((originalValue[0] / 60.0) / 24.0) / 7.0) / 4.3452381) / 12.0))));
+                                textFieldConverted.setText(minutesToYears);
                                 break;
                         }
                         break;
@@ -184,45 +171,38 @@ public class Time extends JFrame {
                         switch (convertedUnit) {
                             // When converted combo box is seconds
                             case 0:
-                                float hoursToSeconds = Float.parseFloat(String.format("%.2f", (originalValue[0] * (float) Math.pow(60, 2))));
-                                String hoursToSecondsString = Float.toString(hoursToSeconds);
-                                textFieldConverted.setText(hoursToSecondsString);
+                                String hoursToSeconds = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * (float) Math.pow(60, 2)))));
+                                textFieldConverted.setText(hoursToSeconds);
                                 break;
                             // When converted combo box is minutes
                             case 1:
-                                float hoursToMinutes = Float.parseFloat(String.format("%.2f", (originalValue[0] * 60.0)));
-                                String hoursToMinutesString = Float.toString(hoursToMinutes);
-                                textFieldConverted.setText(hoursToMinutesString);
+                                String hoursToMinutes = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 60.0))));
+                                textFieldConverted.setText(hoursToMinutes);
                                 break;
                             // When converted combo box is hours
                             case 2:
-                                float hoursToHours = Float.parseFloat(String.format("%.2f", originalValue[0]));
-                                String hoursToHoursString = Float.toString(hoursToHours);
-                                textFieldConverted.setText(hoursToHoursString);
+                                String hoursToHours = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
+                                textFieldConverted.setText(hoursToHours);
                                 break;
                             // When converted combo box is days
                             case 3:
-                                float hoursToDays = Float.parseFloat(String.format("%.2f", (originalValue[0] / 24.0)));
-                                String hoursToDaysString = Float.toString(hoursToDays);
-                                textFieldConverted.setText(hoursToDaysString);
+                                String hoursToDays = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] / 24.0))));
+                                textFieldConverted.setText(hoursToDays);
                                 break;
                             // When converted combo box is weeks
                             case 4:
-                                float hoursToWeeks = Float.parseFloat(String.format("%.2f", ((originalValue[0] / 24.0) / 7.0)));
-                                String hoursToWeeksString = Float.toString(hoursToWeeks);
-                                textFieldConverted.setText(hoursToWeeksString);
+                                String hoursToWeeks = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] / 24.0) / 7.0))));
+                                textFieldConverted.setText(hoursToWeeks);
                                 break;
                             // When converted combo box is months
                             case 5:
-                                float hoursToMonths = Float.parseFloat(String.format("%.2f", (((originalValue[0] / 24.0) / 7.0) / 4.3452381)));
-                                String hoursToMonthsString = Float.toString(hoursToMonths);
-                                textFieldConverted.setText(hoursToMonthsString);
+                                String hoursToMonths = Float.toString(Float.parseFloat(String.format("%.2f", (((originalValue[0] / 24.0) / 7.0) / 4.3452381))));
+                                textFieldConverted.setText(hoursToMonths);
                                 break;
                             // When converted combo box is years
                             case 6:
-                                float hoursToYears = Float.parseFloat(String.format("%.2f", ((((originalValue[0] / 24.0) / 7.0) / 4.3452381) / 12.0)));
-                                String hoursToYearsString = Float.toString(hoursToYears);
-                                textFieldConverted.setText(hoursToYearsString);
+                                String hoursToYears = Float.toString(Float.parseFloat(String.format("%.2f", ((((originalValue[0] / 24.0) / 7.0) / 4.3452381) / 12.0))));
+                                textFieldConverted.setText(hoursToYears);
                                 break;
                         }
                         break;
@@ -231,44 +211,37 @@ public class Time extends JFrame {
                         switch (convertedUnit) {
                             // When converted combo box is seconds
                             case 0:
-                                float daysToSeconds = Float.parseFloat(String.format("%.2f", ((originalValue[0] * 24.0) * (float) Math.pow(60, 2))));
-                                String daysToSecondsString = Float.toString(daysToSeconds);
-                                textFieldConverted.setText(daysToSecondsString);
+                                String daysToSeconds = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] * 24.0) * (float) Math.pow(60, 2)))));
+                                textFieldConverted.setText(daysToSeconds);
                                 break;
                             // When converted combo box is minutes
                             case 1:
-                                float daysToMinutes = Float.parseFloat(String.format("%.2f", ((originalValue[0] * 24.0) * 60.0)));
-                                String daysToMinutesString = Float.toString(daysToMinutes);
-                                textFieldConverted.setText(daysToMinutesString);
+                                String daysToMinutes = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] * 24.0) * 60.0))));
+                                textFieldConverted.setText(daysToMinutes);
                                 break;
                             // When converted combo box is hours
                             case 2:
-                                float daysToHours = Float.parseFloat(String.format("%.2f", (originalValue[0] * 24.0)));
-                                String daysToHoursString = Float.toString(daysToHours);
-                                textFieldConverted.setText(daysToHoursString);
+                                String daysToHours = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 24.0))));
+                                textFieldConverted.setText(daysToHours);
                                 break;
                             // When converted combo box is days
                             case 3:
-                                float daysToDays = Float.parseFloat(String.format("%.2f", originalValue[0]));
-                                String daysToDaysString = Float.toString(daysToDays);
-                                textFieldConverted.setText(daysToDaysString);
+                                String daysToDays = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
+                                textFieldConverted.setText(daysToDays);
                                 break;
                             // When converted combo box is weeks
                             case 4:
-                                float daysToWeeks = Float.parseFloat(String.format("%.2f", (originalValue[0] / 7.0)));
-                                String daysToWeeksString = Float.toString(daysToWeeks);
-                                textFieldConverted.setText(daysToWeeksString);
+                                String daysToWeeks = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] / 7.0))));
+                                textFieldConverted.setText(daysToWeeks);
                                 break;
                             // When converted combo box is months
                             case 5:
-                                float daysToMonths = Float.parseFloat(String.format("%.2f", ((originalValue[0] / 7.0) / 4.3452381)));
-                                String daysToMonthsString = Float.toString(daysToMonths);
-                                textFieldConverted.setText(daysToMonthsString);
+                                String daysToMonths = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] / 7.0) / 4.3452381))));
+                                textFieldConverted.setText(daysToMonths);
                                 break;
                             // When converted combo box is years
                             case 6:
-                                float daysToYears = Float.parseFloat(String.format("%.2f", (((originalValue[0] / 7.0) / 4.3452381) / 12.0)));
-                                String daysToYearsString = Float.toString(daysToYears);
+                                String daysToYearsString = Float.toString(Float.parseFloat(String.format("%.2f", (((originalValue[0] / 7.0) / 4.3452381) / 12.0))));
                                 textFieldConverted.setText(daysToYearsString);
                                 break;
                         }
@@ -278,45 +251,38 @@ public class Time extends JFrame {
                         switch (convertedUnit) {
                             // When converted combo box is seconds
                             case 0:
-                                float weeksToSeconds = Float.parseFloat(String.format("%.2f", (((originalValue[0] * 7.0) * 24.0) * (float) Math.pow(60, 2))));
-                                String weeksToSecondsString = Float.toString(weeksToSeconds);
-                                textFieldConverted.setText(weeksToSecondsString);
+                                String weeksToSeconds = Float.toString(Float.parseFloat(String.format("%.2f", (((originalValue[0] * 7.0) * 24.0) * (float) Math.pow(60, 2)))));
+                                textFieldConverted.setText(weeksToSeconds);
                                 break;
                             // When converted combo box is minutes
                             case 1:
-                                float weeksToMinutes = Float.parseFloat(String.format("%.2f", (((originalValue[0] * 7.0) * 24.0) * 60.0)));
-                                String weeksToMinutesString = Float.toString(weeksToMinutes);
-                                textFieldConverted.setText(weeksToMinutesString);
+                                String weeksToMinutes = Float.toString(Float.parseFloat(String.format("%.2f", (((originalValue[0] * 7.0) * 24.0) * 60.0))));
+                                textFieldConverted.setText(weeksToMinutes);
                                 break;
                             // When converted combo box is hours
                             case 2:
-                                float weeksToHours = Float.parseFloat(String.format("%.2f", ((originalValue[0] * 7.0) * 24.0)));
-                                String weeksToHoursString = Float.toString(weeksToHours);
-                                textFieldConverted.setText(weeksToHoursString);
+                                String weeksToHours = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] * 7.0) * 24.0))));
+                                textFieldConverted.setText(weeksToHours);
                                 break;
                             // When converted combo box is days
                             case 3:
-                                float weeksToDays = Float.parseFloat(String.format("%.2f", (originalValue[0] * 7.0)));
-                                String weeksToDaysString = Float.toString(weeksToDays);
-                                textFieldConverted.setText(weeksToDaysString);
+                                String weeksToDays = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 7.0))));
+                                textFieldConverted.setText(weeksToDays);
                                 break;
                             // When converted combo box is weeks
                             case 4:
-                                float weeksToWeeks = Float.parseFloat(String.format("%.2f", originalValue[0]));
-                                String weeksToWeeksString = Float.toString(weeksToWeeks);
-                                textFieldConverted.setText(weeksToWeeksString);
+                                String weeksToWeeks = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
+                                textFieldConverted.setText(weeksToWeeks);
                                 break;
                             // When converted combo box is months
                             case 5:
-                                float weeksToMonths = Float.parseFloat(String.format("%.2f", (originalValue[0] / 4.3452381)));
-                                String weeksToMonthsString = Float.toString(weeksToMonths);
-                                textFieldConverted.setText(weeksToMonthsString);
+                                String weeksToMonths = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] / 4.3452381))));
+                                textFieldConverted.setText(weeksToMonths);
                                 break;
                             // When converted combo box is years
                             case 6:
-                                float weeksToYears = Float.parseFloat(String.format("%.2f", ((originalValue[0] / 4.3452381) / 12.0)));
-                                String weeksToYearsString = Float.toString(weeksToYears);
-                                textFieldConverted.setText(weeksToYearsString);
+                                String weeksToYears = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] / 4.3452381) / 12.0))));
+                                textFieldConverted.setText(weeksToYears);
                                 break;
                         }
                         break;
@@ -325,45 +291,38 @@ public class Time extends JFrame {
                         switch (convertedUnit) {
                             // When converted combo box is seconds
                             case 0:
-                                float monthsToSeconds = Float.parseFloat(String.format("%.2f", ((((originalValue[0] * 4.3452381) * 7.0) * 24.0) * (float) Math.pow(60, 2))));
-                                String monthsToSecondsString = Float.toString(monthsToSeconds);
-                                textFieldConverted.setText(monthsToSecondsString);
+                                String monthsToSeconds = Float.toString(Float.parseFloat(String.format("%.2f", ((((originalValue[0] * 4.3452381) * 7.0) * 24.0) * (float) Math.pow(60, 2)))));
+                                textFieldConverted.setText(monthsToSeconds);
                                 break;
                             // When converted combo box is minutes
                             case 1:
-                                float monthsToMinutes = Float.parseFloat(String.format("%.2f", ((((originalValue[0] * 4.3452381) * 7.0) * 24.0) * 60.0)));
-                                String monthsToMinutesString = Float.toString(monthsToMinutes);
-                                textFieldConverted.setText(monthsToMinutesString);
+                                String monthsToMinutes= Float.toString(Float.parseFloat(String.format("%.2f", ((((originalValue[0] * 4.3452381) * 7.0) * 24.0) * 60.0))));
+                                textFieldConverted.setText(monthsToMinutes);
                                 break;
                             // When converted combo box is hours
                             case 2:
-                                float monthsToHours = Float.parseFloat(String.format("%.2f", (((originalValue[0] * 4.3452381) * 7.0) * 24.0)));
-                                String monthsToHoursString = Float.toString(monthsToHours);
-                                textFieldConverted.setText(monthsToHoursString);
+                                String monthsToHours = Float.toString(Float.parseFloat(String.format("%.2f", (((originalValue[0] * 4.3452381) * 7.0) * 24.0))));
+                                textFieldConverted.setText(monthsToHours);
                                 break;
                             // When converted combo box is days
                             case 3:
-                                float monthsToDays = Float.parseFloat(String.format("%.2f", ((originalValue[0] * 4.3452381) * 7.0)));
-                                String monthsToDaysString = Float.toString(monthsToDays);
-                                textFieldConverted.setText(monthsToDaysString);
+                                String monthsToDays = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] * 4.3452381) * 7.0))));
+                                textFieldConverted.setText(monthsToDays);
                                 break;
                             // When converted combo box is weeks
                             case 4:
-                                float monthsToWeeks = Float.parseFloat(String.format("%.2f", (originalValue[0] * 4.3452381)));
-                                String monthsToWeeksString = Float.toString(monthsToWeeks);
-                                textFieldConverted.setText(monthsToWeeksString);
+                                String monthsToWeeks = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 4.3452381))));
+                                textFieldConverted.setText(monthsToWeeks);
                                 break;
                             // When converted combo box is months
                             case 5:
-                                float monthsToMonths = Float.parseFloat(String.format("%.2f", originalValue[0]));
-                                String monthsToMonthsString = Float.toString(monthsToMonths);
-                                textFieldConverted.setText(monthsToMonthsString);
+                                String monthsToMonths = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
+                                textFieldConverted.setText(monthsToMonths);
                                 break;
                             // When converted combo box is years
                             case 6:
-                                float monthsToYears = Float.parseFloat(String.format("%.2f", (originalValue[0] / 12.0)));
-                                String monthsToYearsString = Float.toString(monthsToYears);
-                                textFieldConverted.setText(monthsToYearsString);
+                                String monthsToYears = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] / 12.0))));
+                                textFieldConverted.setText(monthsToYears);
                                 break;
                         }
                         break;
@@ -372,45 +331,38 @@ public class Time extends JFrame {
                         switch(convertedUnit) {
                             // When converted combo box is seconds
                             case 0:
-                                float yearsToSeconds = Float.parseFloat(String.format("%.2f", (((((originalValue[0] * 12.0) * 4.3452381) * 7.0) * 24.0) * (float) Math.pow(60, 2))));
-                                String yearsToSecondsString = Float.toString(yearsToSeconds);
-                                textFieldConverted.setText(yearsToSecondsString);
+                                String yearsToSeconds = Float.toString(Float.parseFloat(String.format("%.2f", (((((originalValue[0] * 12.0) * 4.3452381) * 7.0) * 24.0) * (float) Math.pow(60, 2)))));
+                                textFieldConverted.setText(yearsToSeconds);
                                 break;
                             // When converted combo box is minutes
                             case 1:
-                                float yearsToMinutes = Float.parseFloat(String.format("%.2f", (((((originalValue[0] * 12.0) * 4.3452381) * 7.0) * 24.0) * 60.0)));
-                                String yearsToMinutesString = Float.toString(yearsToMinutes);
-                                textFieldConverted.setText(yearsToMinutesString);
+                                String yearsToMinutes = Float.toString(Float.parseFloat(String.format("%.2f", (((((originalValue[0] * 12.0) * 4.3452381) * 7.0) * 24.0) * 60.0))));
+                                textFieldConverted.setText(yearsToMinutes);
                                 break;
                             // When converted combo box is hours
                             case 2:
-                                float yearsToHours = Float.parseFloat(String.format("%.2f", ((((originalValue[0] * 12.0) * 4.3452381) * 7.0) * 24.0)));
-                                String yearsToHoursString = Float.toString(yearsToHours);
-                                textFieldConverted.setText(yearsToHoursString);
+                                String yearsToHours = Float.toString(Float.parseFloat(String.format("%.2f", ((((originalValue[0] * 12.0) * 4.3452381) * 7.0) * 24.0))));
+                                textFieldConverted.setText(yearsToHours);
                                 break;
                             // When converted combo box is days
                             case 3:
-                                float yearsToDays = Float.parseFloat(String.format("%.2f", (((originalValue[0] * 12.0) * 4.3452381) * 7.0)));
-                                String yearsToDaysString = Float.toString(yearsToDays);
-                                textFieldConverted.setText(yearsToDaysString);
+                                String yearsToDays = Float.toString(Float.parseFloat(String.format("%.2f", (((originalValue[0] * 12.0) * 4.3452381) * 7.0))));
+                                textFieldConverted.setText(yearsToDays);
                                 break;
                             // When converted combo box is weeks
                             case 4:
-                                float yearsToWeeks = Float.parseFloat(String.format("%.2f", ((originalValue[0] * 12.0) * 4.3452381)));
-                                String yearsToWeeksString = Float.toString(yearsToWeeks);
-                                textFieldConverted.setText(yearsToWeeksString);
+                                String yearsToWeeks = Float.toString(Float.parseFloat(String.format("%.2f", ((originalValue[0] * 12.0) * 4.3452381))));
+                                textFieldConverted.setText(yearsToWeeks);
                                 break;
                             // When converted combo box is months
                             case 5:
-                                float yearsToMonths = Float.parseFloat(String.format("%.2f", (originalValue[0] * 12.0)));
-                                String yearsToMonthsString = Float.toString(yearsToMonths);
-                                textFieldConverted.setText(yearsToMonthsString);
+                                String yearsToMonths = Float.toString(Float.parseFloat(String.format("%.2f", (originalValue[0] * 12.0))));
+                                textFieldConverted.setText(yearsToMonths);
                                 break;
                             // When converted combo box is years
                             case 6:
-                                float yearsToYears = Float.parseFloat(String.format("%.2f", originalValue[0]));
-                                String yearsToYearsString = Float.toString(yearsToYears);
-                                textFieldConverted.setText(yearsToYearsString);
+                                String yearsToYears = Float.toString(Float.parseFloat(String.format("%.2f", originalValue[0])));
+                                textFieldConverted.setText(yearsToYears);
                                 break;
                         }
                         break;
